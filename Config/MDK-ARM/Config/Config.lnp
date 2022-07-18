@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"config\startup_stm32f103x6.o"
+"config\lcd_16x2.o"
+"config\main.o"
+"config\stm32f1xx_it.o"
+"config\stm32f1xx_hal_msp.o"
+"config\stm32f1xx_hal_gpio_ex.o"
+"config\stm32f1xx_hal_adc.o"
+"config\stm32f1xx_hal_adc_ex.o"
+"config\stm32f1xx_hal.o"
+"config\stm32f1xx_hal_rcc.o"
+"config\stm32f1xx_hal_rcc_ex.o"
+"config\stm32f1xx_hal_gpio.o"
+"config\stm32f1xx_hal_dma.o"
+"config\stm32f1xx_hal_cortex.o"
+"config\stm32f1xx_hal_pwr.o"
+"config\stm32f1xx_hal_flash.o"
+"config\stm32f1xx_hal_flash_ex.o"
+"config\stm32f1xx_hal_exti.o"
+"config\stm32f1xx_hal_tim.o"
+"config\stm32f1xx_hal_tim_ex.o"
+"config\system_stm32f1xx.o"
+--strict --scatter "Config\Config.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Config.map" -o Config\Config.axf
